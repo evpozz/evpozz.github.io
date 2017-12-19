@@ -1,111 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,900");
 
 body {
-  font-family: "Playfair:400", "Helvetica", "Arial", sans-serif;
+  font-family: "Playfair", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   color: rgb(0,0,0);
   margin: 8px;
-}
-
-header {
-  background-image: url(beach.jpg);
-  min-height: 240px;
-  padding-left: 30px;
-  padding-bottom: 15px;
-  padding-top: 20px;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
-  grid-template-areas:
-    /*"header header header"*/
-    "education            professional-experience extracurricular-activities"
-    "additional-interests professional-experience extracurricular-activities"
-    /*"footer               footer                  footer";*/
-}
-
-a {
-  color: rgb(255,255,255)
-}
-
-h1 {
-  font-size: 70px;
-  font-family:"Playfair:900",  "Helvetica", serif;
-  color: rgb(255,255,255);
-  text-shadow: 2px -2px rgb(0,0,0);
-  padding-left: 140px;
-}
-
-h2 {
-  font-size: 30px;
-  font-family:"Helvetic", serif;
-  color: rgb(100,167,191);
-}
-
-h3 {
-  font-size: 20px;
-  font-family: "Helvetic", serif;
-  color: rgb(0,0,0);
-}
-
-footer {
-  background-image: url(sand.jpg);
-  padding-left: 30px;
-  padding-bottom: 15px;
-  padding-top: 20px;
-  margin-top: 5px;
-}
-
-
-footer h2 {
-  color: rgb(100,167,191);
-  text-shadow: 2px -2px rgb(0,0,0);
-}
-
-
-#education {
-  grid-area: education;
-  background-color: rgb(242,221,215);
-  border-color: rgb(100,167,191);
-  border-style: solid;
-  border-width: medium;
-  padding-left: 8px;
-  padding-right:8px;
-  margin-top: 5px;
-}
-
-#professional-experience {
-  grid-area: professional-experience;
-  background-color: rgb(242,221,215);
-  border-color: rgb(100,167,191);
-  border-style: solid;
-  border-width: medium;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-top: 5px;
-}
-
-#extracurricular-activities {
-  grid-area: extracurricular-activities;
-  background-color: rgb(242,221,215);
-  border-color: rgb(100,167,191);
-  border-style: solid;
-  border-width: medium;
-  padding-left: 8px;
-  padding-right:8px;
-  margin-top: 5px;
-}
-
-#additional-interests {
-  grid-area: additional-interests;
-  background-color: rgb(242,221,215);
-  border-color: rgb(100,167,191);
-  border-style: solid;
-  border-width: medium;
-  padding-left: 8px;
-  padding-right:8px;
-  margin-top: 5px;
+  font-weight: 400;
 }
 
 #wrapper {
@@ -113,8 +13,82 @@ footer h2 {
   margin: auto;
 }
 
-div {
-  display: block;
+a {
+  color: rgb(4,25,62);
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 60px;
+  font-family:"Playfair", "Helvetica", serif;
+  font-weight: 900;
+  color: rgb(4,25,62);
+}
+
+h2,
+h3 {
+  font-family:"Helvetica", serif;
+  color: rgb(0,0,0);
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+
+header {
+  background-color: rgb(235,246,249);
+  border: 3px solid rgb(0,0,0);
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  margin-bottom: 8px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+#index main {
+  grid-template-columns: repeat(2, 1fr) 300px;
+}
+
+#resume main {
+  grid-template-areas:
+    /*"header header header"*/
+    "education            professional-experience extracurricular-activities"
+    "additional-interests professional-experience extracurricular-activities"
+    /*"footer               footer                  footer";*/
+}
+
+/* styles related to #resume */
+
+#education {
+  grid-area: education;
+  background-color: rgb(235,246,249);
+  border: 3px rgb(4,25,62) solid;
+  padding-left: 8px;
+  padding-right:8px;
+  margin-top: 5px;
 }
 
 #education article {
@@ -123,4 +97,128 @@ div {
 
 #education article p {
   margin-left: 10px;
+}
+
+#professional-experience {
+  grid-area: professional-experience;
+  background-color: rgb(235,246,249);
+  border: 3px rgb(4,25,62) solid;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#extracurricular-activities {
+  grid-area: extracurricular-activities;
+  background-color: rgb(235,246,249);
+  border: 3px rgb(4,25,62) solid;
+  padding-left: 8px;
+  padding-right:8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#additional-interests {
+  grid-area: additional-interests;
+  background-color: rgb(235,246,249);
+  border: 3px rgb(4,25,62) solid;
+  padding-left: 8px;
+  padding-right:8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* end #resume style */
+
+/* start #writing style */
+
+#writing main {
+  grid-template-columns: 400px 1fr;
+}
+
+#logo {
+  grid-column: 1 / -1;
+}
+
+#info p {
+  font-size: 18px;
+}
+
+#info ul {
+  font-family: "Playfair", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#info li a {
+  font-size: 18px;
+}
+
+/* end #writing style */
+
+/* start #portfolio style */
+#portfolio main {
+  grid-template-columns: repeat(2, 1fr) 300px;
+  grid-template-rows: repeat(3, 100%);
+  text-align: center;
+  grid-template-areas:
+  "hec bbb kit"
+  "mag1 mag2 mag3"
+  "cuba portrait concert";
+}
+
+#hec {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#bbb {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#kit {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#mag1 {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#mag2 {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#mag3 {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#cuba {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#portrait {
+  border: 2px rgb(4,25,62) solid;
+}
+
+#concert {
+  border: 2px rgb(4,25,62) solid;
+}
+
+
+
+/* end #portfolio style */
+
+footer {
+  background-color: rgb(235,246,249);
+  border: rgb(4,25,62) solid;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+div {
+  display: block;
 }
